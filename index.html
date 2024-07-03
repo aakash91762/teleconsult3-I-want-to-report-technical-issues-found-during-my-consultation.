@@ -196,8 +196,10 @@
           value == "Other [please specify]."
         ) {
           document.getElementById("other").hidden = false;
+          document.getElementById("other").setAttribute("required", "required");
         } else {
           document.getElementById("other").hidden = true;
+          document.getElementById("other").removeAttribute("required");
         }
       });
       if (language == "id") {
